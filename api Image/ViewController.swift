@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
     
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         let session = URLSession(configuration: .default)
         session.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async{
-                self.image1.image = UIImage(data: data!)
+                self.image2.image = UIImage(data: data!)
             }
            
         }.resume()
